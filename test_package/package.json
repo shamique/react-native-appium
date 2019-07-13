@@ -1,0 +1,32 @@
+{
+  "name": "test_package",
+  "version": "1.0.0",
+  "description": "This is my test package",
+  "license": "ISC",
+  "scripts": {
+    "testandroid": "npx wdio ./wdio.conf.js"
+  },
+  "dependencies": {
+    "@wdio/appium-service": "^5.9.3",
+    "@wdio/local-runner": "^5.9.4",
+    "@wdio/mocha-framework": "^5.9.4",
+    "@wdio/spec-reporter": "^5.8.0",
+    "@wdio/sync": "^5.9.4",
+    "@wdio/cli": "^5.10.0",
+    "chai": "^4.2.0",
+    "webdriverio": "^5.10.0",
+    "wdio-appium-service": "^0.2.3"
+  },
+  "bundledDependencies": [
+    "@wdio/appium-service",
+    "@wdio/local-runner",
+    "@wdio/mocha-framework",
+    "@wdio/spec-reporter",
+    "@wdio/sync",
+    "npm-bundle",
+    "wdio-appium-service"
+  ],
+  "devDependencies": {
+    "npm-bundle": "^3.0.3"
+  }
+}
