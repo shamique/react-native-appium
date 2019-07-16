@@ -11,9 +11,9 @@ export default class App extends Component {
     }
   }
 
-  inputChangeHandler = (event) => {
+  inputChangeHandler = (value, name) => {
     this.setState({
-      [event.target.name]: event.target.value
+      [name]: value
     })
   }
 
@@ -27,11 +27,11 @@ export default class App extends Component {
     return (
       <View style={LOCAL_STYLES.wrapper} testID="app-root" accessibilityLabel="app-root">
         <View style={LOCAL_STYLES.inputContainer}>
-          <TextInput name="username" accessibilityLabel="username" style={LOCAL_STYLES.input} onChange={this.inputChangeHandler} />
+          <TextInput name="username" accessibilityLabel="username" style={LOCAL_STYLES.input} onChangeText={(text) => this.inputChangeHandler(text, "username")} />
         </View>
 
         <View style={LOCAL_STYLES.inputContainer}>
-          <TextInput name="password" accessibilityLabel="password" style={LOCAL_STYLES.input} onChange={this.inputChangeHandler} />
+          <TextInput name="password" accessibilityLabel="password" secureTextEntry={true} style={LOCAL_STYLES.input} onChangeText={(text) => this.inputChangeHandler(text, "password")} />
         </View>
 
         <Text accessibilityLabel="loginstatus">{this.state.isLogined ? "success" : "fail"}</Text>
