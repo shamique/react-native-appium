@@ -21,6 +21,9 @@ export default class App extends Component {
     if ((this.state.username == 'shamique') && (this.state.password == '123456')) {
       this.setState({ isLogined: true });
     }
+    else {
+      this.setState({ isLogined: false });
+    }
   }
 
   render() {
